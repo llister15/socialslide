@@ -106,33 +106,32 @@ class Social_Slide_Admin {
 add_action( 'admin_menu', 'my_admin_menu' );
 
 function my_admin_menu() {
-	add_menu_page(
-		'Social Slide',
-		'Social Slide', 
-		'manage_options', 
-		'admin/index.php', 
-		'', 
-		'dashicons-rss', 99  );
-	  
-	  add_submenu_page ('admin/index.php',
+	add_menu_page('SocialSlide',
+		'SocialSlide', 
+		'manage_options',
+		'socialslide/admin/index.php', 
+		'',
+		'dashicons-rss',99);
+
+	 add_submenu_page ('socialslide/admin/index.php',
 	    'Settings',
 	    'Settings',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/index.php',
 	    '');
 
-	  add_submenu_page ('admin/facebook.php',
+	  add_submenu_page ('socialslide/admin/index.php',
 	    'Facebook',
 	    'Facebook',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/facebook.php',
 	    '');
 
-	  add_submenu_page ('admin/twitter.php',
+	  add_submenu_page ('socialslide/admin/index.php',
 	    'Twitter',
 	    'Twitter',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/twitter.php',
 	    '');
 
 }
