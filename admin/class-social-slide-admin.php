@@ -106,6 +106,7 @@ class Social_Slide_Admin {
 add_action( 'admin_menu', 'my_admin_menu' );
 
 function my_admin_menu() {
+
 	add_menu_page(
 		'SocialSlide',
 		'SocialSlide', 
