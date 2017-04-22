@@ -107,32 +107,35 @@ add_action( 'admin_menu', 'my_admin_menu' );
 
 function my_admin_menu() {
 	add_menu_page(
-		'Social Slide',
-		'Social Slide', 
+		'SocialSlide',
+		'SocialSlide', 
 		'manage_options', 
-		'admin/index.php', 
+		'socialslide/admin/index.php', 
 		'', 
-		'dashicons-rss', 99  );
+		'dashicons-rss' , 99);
 	  
-	  add_submenu_page ('admin/index.php',
+	  add_submenu_page (
+	    'socialslide/admin/index.php',
 	    'Settings',
 	    'Settings',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/index.php',
 	    '');
 
-	  add_submenu_page ('admin/facebook.php',
+	  add_submenu_page (
+          'socialslide/admin/index.php',
 	    'Facebook',
 	    'Facebook',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/facebook.php',
 	    '');
 
-	  add_submenu_page ('admin/twitter.php',
+	  add_submenu_page (
+          'socialslide/admin/index.php',
 	    'Twitter',
 	    'Twitter',
 	    'manage_options',
-	    'admin/index.php',
+	    'socialslide/admin/twitter.php',
 	    '');
 
 }

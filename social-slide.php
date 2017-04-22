@@ -28,7 +28,7 @@ add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_link
 
 function add_action_links ( $links ) {
      $mylinks = array(
-     '<a href="' . admin_url( 'admin.php?page=/admin/index.php' ) . '">Settings</a>',
+     '<a href="' . admin_url( 'admin.php?page=socialslide/admin/index.php' ) . '">Settings</a>',
      );
     return array_merge( $links, $mylinks );
  }
