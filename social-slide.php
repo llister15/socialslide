@@ -6,7 +6,7 @@
  * @package           Social_Slide
  *
  * @wordpress-plugin
- * Plugin Name:       socialslide
+ * Plugin Name:       Social Slide
  * Plugin URI:        git@github.com:llister15/socialslide.git
  * Description:       This plugin is design to use the Facebook / Twitter API to show a well designed social feed
  * Version:           1.0.0
@@ -21,6 +21,17 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
+
+// Add Settings links
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links' );
+
+function add_action_links ( $links ) {
+     $mylinks = array(
+     '<a href="' . admin_url( 'admin.php?page=/admin/index.php' ) . '">Settings</a>',
+     );
+    return array_merge( $links, $mylinks );
+ }
 
 /**
  * The code that runs during plugin activation.

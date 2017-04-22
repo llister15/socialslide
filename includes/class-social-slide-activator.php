@@ -31,6 +31,8 @@ class Social_Slide_Activator {
 	 */
 	public static function activate() {
 
+    
+
 	}
 
 }
